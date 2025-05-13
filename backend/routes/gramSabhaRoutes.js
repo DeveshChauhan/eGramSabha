@@ -170,6 +170,22 @@ router.get("/panchayat/:panchayatId", async (req, res) => {
     })
       .populate("scheduledById", "name")
       .sort({ dateTime: -1 });
+    const now = new Date();
+
+    for (const sabha of gramSabhas) {
+      const durationInHours = sabha.scheduledDurationHours;
+      const meetingEndTime = new Date(
+        sabha.dateTime.getTime() + durationInHours * 60 * 60 * 1000
+      );
+
+      if (
+        (sabha.status === "IN_PROGRESS" || sabha.status === "SCHEDULED") &&
+        now > meetingEndTime
+      ) {
+        sabha.status = "CONCLUDED";
+        await sabha.save();
+      }
+    }
     res.send(gramSabhas);
   } catch (error) {
     res.status(500).send(error);
@@ -299,7 +315,7 @@ router.patch(
         // Update the meeting in JioMeet
         try {
           // let response = {};
-          // if(gramSabha.jioMeetData?.meetingId) 
+          // if(gramSabha.jioMeetData?.meetingId)
           //   response = await axios.put(
           //     `${JIOMEET_API}/schedule/meeting`,
           //     jioMeetRequestBody,
@@ -309,8 +325,8 @@ router.patch(
           //         Authorization: `Bearer ${jioMeetToken}`,
           //       },
           //     }
-          //   ); 
-          // else 
+          //   );
+          // else
           response = await axios.post(
             `${JIOMEET_API}/schedule/meeting`,
             jioMeetRequestBody,
