@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 - Liveliness checks ([#25](https://github.com/EmpowerPanchayat/eGramSabha/pull/25))
+- Caste feature implementation ([#35](https://github.com/EmpowerPanchayat/eGramSabha/pull/35))
 
 ## [0.1.0] - 2025-04-23
 
