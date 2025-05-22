@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - Liveliness checks ([#25](https://github.com/EmpowerPanchayat/eGramSabha/pull/25))
 - Caste feature implementation ([#35](https://github.com/EmpowerPanchayat/eGramSabha/pull/35))
-- Facial Recognition Enhancements [#9](https://github.com/EmpowerPanchayat/eGramSabha/pull/39))
+- Facial Recognition Enhancements ([#9](https://github.com/EmpowerPanchayat/eGramSabha/pull/39))
+- API Liveness monitor ([#33](https://github.com/EmpowerPanchayat/eGramSabha/pull/36))
 
 ## [0.1.0] - 2025-04-23
 
