@@ -9,10 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Liveliness checks ([#25](https://github.com/EmpowerPanchayat/eGramSabha/pull/25))
-- Caste feature implementation ([#35](https://github.com/EmpowerPanchayat/eGramSabha/pull/35))
-- Facial Recognition Enhancements ([#9](https://github.com/EmpowerPanchayat/eGramSabha/pull/39))
-- API Liveness monitor ([#33](https://github.com/EmpowerPanchayat/eGramSabha/pull/36))
+- Liveliness checks ([#12](https://github.com/EmpowerPanchayat/eGramSabha/issues/12))
+- Caste feature implementation ([#5](https://github.com/EmpowerPanchayat/eGramSabha/issues/5))
+- Facial Recognition Enhancements ([#10](https://github.com/EmpowerPanchayat/eGramSabha/issues/10))
+- API Liveness monitor ([#33](https://github.com/EmpowerPanchayat/eGramSabha/issues/33))
+- Attendance Statistics Display and Export feature implementation([#13](https://github.com/EmpowerPanchayat/eGramSabha/issues/13))
 
 ## [0.1.0] - 2025-04-23
 
