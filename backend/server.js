@@ -148,6 +148,11 @@ app.use('/api/', apiLimiter);
 app.use('/api/auth/login', authLimiter);
 app.use('/api/citizens/face-login', authLimiter);
 
+//Check liveness
+app.get('/api/liveliness', (req, res) => {
+  res.status(200).send('OK');
+});
+
 // Import users from CSV
 app.post('/api/import-csv', upload.single('file'), async (req, res) => {
   try {
